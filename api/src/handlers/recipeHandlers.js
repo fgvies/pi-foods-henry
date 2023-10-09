@@ -20,7 +20,14 @@ const getRecipeByIdHandler = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-
+const deleteRecice = async (recipe) =>{
+  try {
+    await axios.delete("http://localhost:3001/recipes", recipe)
+    const eliminarReceta= r
+  } catch (error) {
+    
+  }
+}
 const getAllRecipeHandler = async (req, res) => {
   try {
     const { name } = req.query;
